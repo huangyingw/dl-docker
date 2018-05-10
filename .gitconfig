@@ -1,0 +1,21 @@
+[remote "floydhub"]
+    url = https://github.com/floydhub/dl-docker.git
+    fetch = +refs/heads/*:refs/remotes/floydhub/*
+[remote "github"]
+    url = https://github.com/huangyingw/dl-docker.git
+    fetch = +refs/heads/*:refs/remotes/github/*
+[push]
+    remote = github
+[gsync]
+    remote = floydhub
+    branch = master
+[merge]
+	allow = true
+[branch "dev"]
+    remote = github
+    merge = refs/heads/dev
+[branch "master"]
+    remote = floydhub
+    merge = refs/heads/master
+[commit]
+	message = n
